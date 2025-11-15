@@ -1,15 +1,238 @@
-* {
+/* /* * {
     /* display: flex; */
     /* padding: 0; */
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #e1eeee;
-}
+    background-color: #e1eeee; */
+/* }
 
 .Header {
 
     text-align: center;
 
+}
+/*  */
+/* .Header h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    color: green; */
+/* } */
+
+/* .Header p { */
+    /* font-size: 18px; */
+    /* color: black; */
+    /* font-weight: bold; */ 
+/* } */
+
+/* .task-box {
+    display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center;
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(5, 94, 239, 0.336);
+} */
+
+/* .task { */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+    width: 950px;
+    gap: 10px;
+    padding: 10px 10px;
+    border: 1px solid #e1eeee;
+    border-radius: 15px; */
+    /* color: #e1eeee; */
+/* } */
+
+
+
+
+/* .task-list {
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 10px; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+    /* margin: 20px; */
+    /* margin-left: 100px; */
+    /* margin-right: 100px;
+    padding: 10px 30px;
+    border-radius: 55px;
+    box-shadow: 0 2px 4px rgba(8, 44, 208, 0.1); */
+/* } */
+
+
+/* .btn2 {
+    display: flex; */
+    /* justify-items: center; */
+    /* background-color: red;
+    color: white;
+    border: none;
+    justify-content: end;
+    flex-direction: row; */ 
+    /* gap: 10px; */
+    /* margin-left: 650px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* .btn1 {
+    background-color: green;
+    color: white;
+    border: none; */
+    /* gap: 10px; */
+    /* margin-left: 10px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* .box {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 150px; */
+    /* margin: auto; */
+    /* gap: 100px; */
+    /* background-color: #fff; */
+    /* border: 1px solid #0dd31e;
+    padding: 20px 30px;
+    border-radius: 35px; */
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(14, 62, 219, 0.1);
+} */
+
+/* .numberBox{
+    /* background-color:  #f4f4f4; */
+/* gap: 100px; */
+/* font-size: ; */
+/* }   */
+/* .numberBox { */
+    /* margin-top: 90px; */
+    /* display: flex;
+    flex-direction: row;
+    /* gap: 30px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* font-size: 16px; */
+    /* color: blue; */
+    /* padding: 5px 10px; */
+    /* border: 1px solid #0dd31e; */
+    /* border-radius: 25px; */
+    /* box-shadow: rgb(7, 80, 189); */
+    /* background-color: beige ; */
+/* }  */
+
+/* .numberBox .p1 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0dd31e;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+/* } */
+
+/* .numberBox .p2 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0dd31e;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: red;
+    font-weight: bolder; */
+/* } */
+
+/* .numberBox .p3 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #0dd31e; */
+    /* padding: 10px 30px;
+    font-size: 18px;
+    color: green;
+    font-weight: bolder;
+}
+
+.task-list-wrapper {
+    text-decoration: "dashed" "none",
+}
+
+@media (max-width: 768px) {
+    .Header h1 {
+        font-size: 2.5rem;
+    }
+
+    .Header p {
+        font-size: 1.2rem;
+    /* }
+    .box {
+        flex-direction: column;
+        margin: 7px;
+        padding: 7px;
+        gap: 20px;
+    }
+
+    .numberBox {
+        padding: 2px 3px;
+        font-size: 1rem;
+    }
+
+    .numberBox .p1,
+    .numberBox .p2,
+    .numberBox .p3 {
+        padding: 3px 5px;
+        font-size: 1rem;
+    /* }
+
+    .task-box {
+        display: flex; 
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .task-list {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+    .task {
+        width: 100%;
+        padding: 5px;
+    }
+    .btn2 {
+        margin-left: 0;
+        padding: 8px 15px;
+    } */ 
+    /* .btn1 { */
+        /* margin-left: 0; */
+        /* padding: 8px 15px; */
+    /* } */
+/* } */ 
+
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e1eeee;
+}
+
+.Header {
+    text-align: center;
 }
 
 .Header h1 {
@@ -24,14 +247,11 @@
     font-weight: bold;
 }
 
+/* INPUT + BUTTON BOX */
 .task-box {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    margin: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    margin: 20px 100px 50px;
     padding: 10px 30px;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -39,85 +259,50 @@
 }
 
 .task {
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
     width: 950px;
-    gap: 10px;
-    padding: 10px 10px;
-    border: 1px solid #e1eeee;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 15px;
-    /* color: #e1eeee; */
+    background: #fff;
 }
 
-
-
-
+/* TASK ITEM */
 .task-list {
-    /* display: inline-flex; */
-    justify-content: center;
-    /* align-items: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 10px 30px;
-    border-radius: 55px;
-    box-shadow: 0 2px 4px rgba(8, 44, 208, 0.1);
-}
 
+    border: 1px solid #ddd;
+    border-radius: 55px;
+    margin: 20px 100px;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(8, 44, 208, 0.1);
+    background: #fff;
+}
 
 .btn2 {
-    display: flex;
-    /* justify-items: center; */
     background-color: red;
     color: white;
     border: none;
-    justify-content: end;
-    flex-direction: row;
-    /* gap: 10px; */
-    margin-left: 650px;
     padding: 10px 25px;
     border-radius: 5px;
     cursor: pointer;
+
+    margin-left: auto;  /* PUSHES BUTTON RIGHT */
 }
 
 .btn1 {
     background-color: green;
     color: white;
     border: none;
-    /* gap: 10px; */
     margin-left: 10px;
     padding: 10px 25px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.box {
-    display: flex;
-    margin-top: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
-    /* margin: auto; */
-    gap: 100px;
-    /* background-color: #fff; */
-    border: 1px solid #0dd31e;
-    padding: 20px 30px;
-    border-radius: 35px;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(14, 62, 219, 0.1);
-}
-
-/* .numberBox{
-    /* background-color:  #f4f4f4; */
-/* gap: 100px; */
-/* font-size: ; */
-/* }   */
+/* NUMBERS BOX */
 .numberBox {
     /* margin-top: 90px; */
     display: flex;
@@ -150,22 +335,19 @@
     border: 1px solid #0dd31e;
     padding: 10px 30px;
     font-size: 18px;
-    color: red;
+    color: green;
     font-weight: bolder;
 }
 
 .numberBox .p3 {
     display: flex;
-    justify-content: center;
+     justify-content: center;
     border: 1px solid #0dd31e;
     padding: 10px 30px;
     font-size: 18px;
-    color: green;
+    color: red;
     font-weight: bolder;
-}
 
-.task-list span {
-    text-decoration: "dashed" "none",
 }
 
 @media (max-width: 768px) {
@@ -175,11 +357,11 @@
 
     .Header p {
         font-size: 1.2rem;
-    }
+     }
     .box {
         flex-direction: column;
         margin: 7px;
-        padding: 7px;
+        padding: 7px; 
         gap: 20px;
     }
 
@@ -214,9 +396,9 @@
     .btn2 {
         margin-left: 0;
         padding: 8px 15px;
-    }
-    .btn1 {
-        margin-left: 0;
-        padding: 8px 15px;
-    }
-}
+    }  
+     .btn1 { 
+         margin-left: 0; 
+        padding: 8px 15px; 
+    } 
+ } 

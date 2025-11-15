@@ -93,11 +93,11 @@
 //   const deleteTask = () => {
 //     setTasks(tasks.filter(t => t.id !== id));
 //   };
-  
+
 
 //   return (
 //     <div>
-     
+
 
 //       <div className="box">
 //         <p>Total Tasks: {totalTasks}</p>
@@ -134,18 +134,28 @@
 //   );
 // }
 
-
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 
 export default function AddTask() {
-  const [tasks, setTasks] = useState([]);
+  // Load from localStorage on first render
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [newTask, setNewTask] = useState("");
 
   // Count values
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter(t => t.completed).length;
   const pendingTasks = tasks.filter(t => !t.completed).length;
+
+  // Save to localStorage whenever tasks change
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   // Add task
   const addTask = () => {
@@ -161,7 +171,12 @@ export default function AddTask() {
     setNewTask("");
   };
 
-  // Toggle completed
+  // Add task using Enter key
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") addTask();
+  };
+
+  // Toggle complete
   const toggleComplete = (id) => {
     setTasks(prev =>
       prev.map(t =>
@@ -175,22 +190,17 @@ export default function AddTask() {
     setTasks(prev => prev.filter(t => t.id !== id));
   };
 
-  // Add task using Enter key
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") addTask();
-  };
-
   return (
     <div>
 
-    
+      {/* Numbers */}
       <div className="numberBox">
         <p className="p1">Total Tasks: {totalTasks}</p>
         <p className="p2">Completed: {completedTasks}</p>
         <p className="p3">Pending: {pendingTasks}</p>
       </div>
 
-      
+      {/* Add task */}
       <div className="task-box">
         <input
           value={newTask}
@@ -202,11 +212,12 @@ export default function AddTask() {
         <button onClick={addTask} className="btn1">Add Task</button>
       </div>
 
-      {/* List of Tasks */}
+      {/* List of tasks */}
       <ul className="task-list-wrapper">
         {tasks.map(task => (
           <li key={task.id} className="task-list">
 
+            {/* Toggle checkbox */}
             <span
               onClick={() => toggleComplete(task.id)}
               style={{
@@ -218,14 +229,16 @@ export default function AddTask() {
                 gap: "8px"
               }}
             >
-              {/*  checkmark */}
-              {task.completed && (
-                <span style={{ color: "green", fontSize: "18px"  }}>✔</span>
-              )}
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => toggleComplete(task.id)}
+              />
 
               {task.title}
             </span>
 
+            {/* Delete */}
             <button className="btn2" onClick={() => deleteTask(task.id)}>
               Delete
             </button>

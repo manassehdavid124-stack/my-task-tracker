@@ -142,10 +142,33 @@ import { useState } from "react";
 
 export default function AddTask() {
   // Load from localStorage on first render
-  const [tasks, setTasks] = useState(() => {
+  // const [tasks, setTasks] = useState(() => {
+  //   const saved = localStorage.getItem("tasks");
+  //   if (saved) {
+  //     setTasks(JSON.parse(saved));
+  //   }
+  // }, []);
+
+  //  import { useEffect, useState } from "react";
+
+// export default function TaskTracker() {
+  // const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  // Load tasks safely (client only)
+  useEffect(() => {
     const saved = localStorage.getItem("tasks");
-    return saved ? JSON.parse(saved) : [];
-  });
+    if (saved) {
+      setTasks(JSON.parse(saved));
+    }
+  }, []);
+
+  // Save tasks whenever they change
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+  }, [tasks]);
 
   const [newTask, setNewTask] = useState("");
 
@@ -154,10 +177,12 @@ export default function AddTask() {
   const completedTasks = tasks.filter(t => t.completed).length;
   const pendingTasks = tasks.filter(t => !t.completed).length;
 
-  // Save to localStorage whenever tasks change
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+  // Save tasks whenever they change
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     localStorage.setItem("tasks", JSON.stringify(tasks));
+  //   }
+  // }, [tasks]);
 
   // Add task
   const addTask = () => {

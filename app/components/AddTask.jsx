@@ -136,7 +136,9 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function AddTask() {
   // Load from localStorage on first render
